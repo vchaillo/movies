@@ -1,0 +1,114 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require jquery-ui/autocomplete
+ *= require_tree .
+ *= require_self
+ */
+
+$red: #F50000;
+$dark_red: #C50000;
+
+$grey: #CCC;
+$light_grey: #EEE;
+$dark_grey: #777;
+
+*
+{
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html/*,
+body*/
+{
+    height: 100%;
+}
+
+body
+{
+	font-family: sans-serif;
+
+	background: url(asset-path(''));
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    padding:15px 0;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    width: auto;
+}
+a:hover
+{
+    color: $red;
+}
+
+button, input, select, textarea, .btn
+{
+	border: 1px solid $dark_grey;
+    border-radius: 3px;
+    vertical-align: middle;
+    padding: 5px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    display: inline;
+}
+
+textarea
+{
+    height: 200px;
+    resize: vertical;
+}
+
+select
+{
+    width: 97px;
+}
+
+input[type="submit"], button, .btn
+{
+    font-size: 1em;
+    padding: 10px;
+    background-color: $red;
+    border: 1px solid $red;
+    font-weight: bold;
+    width: auto;
+    color: #fff;
+    display: inline-block;
+    -webkit-appearance: none;
+}
+
+input[type="submit"]:hover, button:hover, .btn:hover
+{
+    cursor: pointer;
+    background-color: $dark_red;
+    color: #fff;
+    border: 1px solid $dark_red;
+}
+

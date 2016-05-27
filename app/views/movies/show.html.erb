@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @movie.title_vf %></h1>
+
+<p>
+  <%= image_tag @movie.image %>
+</p>
+
+<p>
+  <strong>Title vo:</strong>
+  <%= @movie.title_vo %>
+</p>
+
+<p>
+  <strong>Title vf:</strong>
+  <%= @movie.title_vf %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @movie.year %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @movie.duration %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @movie.quality %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @movie.language %>
+</p>
+
+<p>
+  <strong>Bw:</strong>
+  <%= @movie.bw %>
+</p>
+
+<p>
+  <strong>Synopsis:</strong>
+  <%= @movie.synopsis %>
+</p>
+
+<%= link_to 'Edit', edit_movie_path(@movie), class: 'btn' %>

@@ -1,0 +1,62 @@
+<% Director.all.each do |director| %>
+    <input type="hidden" class="directors" name="<%= director.id %>" value="<%= director.fullname %>">
+<% end %>
+
+<%= form_for(@movie) do |f| %>
+  <% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@movie.errors.count, "error") %> prohibited this movie from being saved:</h2>
+
+      <ul>
+      <% @movie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title_vo %><br>
+    <%= f.text_field :title_vo %>
+  </div>
+  <div class="field">
+    <%= f.label :title_vf %><br>
+    <%= f.text_field :title_vf %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :duration %><br>
+    <%= f.text_field :duration %>
+  </div>
+  <div class="field">
+    <%= f.label :director %><br>
+    <%= text_field_tag :director %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quality %><br>
+    <%= f.select :quality, ['1080p', '720p', 'DVDRIP', 'Screener'] %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.select :language, ['VOST', 'VF', 'MULTI', 'VO'] %>
+  </div>
+  <div class="field">
+    <%= f.label :bw %><br>
+    <%= f.check_box :bw %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :synopsis %><br>
+    <%= f.text_area :synopsis %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

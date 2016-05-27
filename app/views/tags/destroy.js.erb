@@ -1,0 +1,5 @@
+$(function() {
+  return $(".delete_tag").on("ajax:success", function(e, data, status, xhr) {
+   	$(this).closest('tr').fadeOut();
+  });
+});

@@ -1,0 +1,21 @@
+<header>
+
+	<a href="/"><%= image_tag 'icons/robin-williams.png' %></a>
+	
+	<% if current_user %>
+		<%= link_to 'Logout', '/logout', id: 'logout', class: 'btn' %>
+	<% end %>
+
+	<div id="navbar">
+		<% if current_user %>
+		<%= link_to 'Films', '/movies' %>
+		<%= link_to 'Réalisateurs', '/directors' %>
+		<%= link_to 'Acteurs', '/actors' %>
+		<%= link_to 'Scénaristes', '/writers' %>
+		<%= link_to 'Utilisateurs', '/users' %>
+		<%= link_to 'Catégories', '/categories' %>
+		<%= link_to 'Tags', '/tags' %>
+		<% end %>
+	</div>
+
+</header>

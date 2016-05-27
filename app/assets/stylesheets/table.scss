@@ -1,0 +1,36 @@
+$dark_grey: #DDD;
+$light_grey: #EEE;
+
+table{
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  border-collapse: collapse;
+  text-align: left;
+  overflow: hidden;
+  
+  td, th{
+    border-top: 1px solid $dark_grey;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  td{
+    border-left: 1px solid $dark_grey;
+    border-right: 1px solid $dark_grey;
+  }
+
+  th{
+    background-color: #000;
+    color: #fff;
+  }
+  
+  tr:nth-of-type(even) td{
+    background-color: $light_grey;
+  }
+
+  tr:last-child{
+    border-bottom: 1px solid $dark_grey;
+  }
+  
+}

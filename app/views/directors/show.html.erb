@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= @director.fullname %></h1>
+
+<p>
+  <%= image_tag @director.image %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @director.birth %>
+</p>
+
+<p>
+  <strong>Nationalities:</strong>
+	<% @countries.each do |country| %>
+		<%= country.name %>
+	<% end %>
+</p>
+
+<p>
+  <strong>Movies:</strong>
+	<% @movies.each do |movie| %>
+		<%= movie.title_vf %>
+	<% end %>
+</p>
+
+
+<p>
+  <strong>Bio:</strong>
+  <%= @director.bio %>
+</p>
+
+<%= link_to 'Edit', edit_director_path(@director), class: 'btn' %>

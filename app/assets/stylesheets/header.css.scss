@@ -1,0 +1,35 @@
+$red: #F50000;
+
+header
+{
+	text-align: center;
+	img
+	{
+		display: block;
+		margin: 10px auto;
+		width: 100px;
+	}
+
+	#logout
+	{
+		position: absolute;
+		margin: 0;
+		top: 10px;
+		right: 10px;
+	}
+
+	#navbar
+	{
+		background-color: #000;
+		a
+		{
+			font-weight: bold;
+			color: #fff;
+			padding: 10px;
+		}
+		a:hover
+		{
+			color: $red;
+		}
+	}
+}

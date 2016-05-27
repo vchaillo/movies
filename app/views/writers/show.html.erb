@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fullname:</strong>
+  <%= @writer.fullname %>
+</p>
+
+<p>
+  <strong>Birth:</strong>
+  <%= @writer.birth %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @writer.bio %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @writer.image %>
+</p>
+
+<%= link_to 'Edit', edit_writer_path(@writer) %> |
+<%= link_to 'Back', writers_path %>

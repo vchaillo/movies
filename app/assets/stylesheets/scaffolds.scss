@@ -1,0 +1,58 @@
+$red: #F50000;
+$light_grey: #EEE;
+
+body {
+  font-size: 13px;
+  line-height: 18px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+  &.top
+  {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+
+
+#notice {
+  max-width: 450px;
+  color: green;
+  margin: 20px auto;
+  font-weight: bold;
+}
+
+
+#error_explanation {
+  max-width: 450px;
+  border: 1px solid $red;
+  border-radius: 3px;
+  padding: 7px;
+  padding-bottom: 0;
+  margin: auto;
+  margin-bottom: 20px;
+
+  h2 {
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: $red;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: none;
+  }
+}
+
+.field_with_errors {
+  input {
+    border: 1px solid $red;
+  }
+}

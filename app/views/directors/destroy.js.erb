@@ -1,0 +1,5 @@
+$(function() {
+  return $(".delete_director").on("ajax:success", function(e, data, status, xhr) {
+   	$(this).closest('tr').fadeOut();
+  });
+});

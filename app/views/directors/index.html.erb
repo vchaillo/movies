@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<div class="top">
+  <h1>Listing Directors</h1>
+  <%= link_to 'New Director', new_director_path, class: 'btn' %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fullname</th>
+      <th>Age</th>
+      <th>Bio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @directors.each do |director| %>
+      <tr>
+        <td><%= director.fullname %></td>
+        <td><%= director.age %></td>
+        <td><%= director.short_bio %></td>
+        <td><%= link_to 'Show', director %></td>
+        <td><%= link_to 'Edit', edit_director_path(director) %></td>
+        <td><%= link_to 'Destroy', director, method: :delete, data: { confirm: 'Are you sure?' }, remote: true, class: 'delete_director' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

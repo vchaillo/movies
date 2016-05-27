@@ -1,0 +1,19 @@
+<div id="login_form">
+	<h1>Connexion</h1>
+
+	<%= form_for(:session, url: login_path) do |f| %> 
+		
+		<% if flash[:login_error] %>
+			<div class="error">
+		  		<p><%= flash[:login_error] %></p>
+			</div>
+		<% end %>
+		
+		<%= f.email_field :email, placeholder: "Email", autofocus: true, required: true %>
+		<br>
+		<%= f.password_field :password, placeholder: "Mot de passe", required: true %> 
+		<br>
+		<%= f.submit "Connexion" %>
+
+	<% end %>
+</div>
