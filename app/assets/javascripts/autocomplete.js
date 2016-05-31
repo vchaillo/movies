@@ -12,7 +12,7 @@ $(document).on('page:change', function() {
 
     var availableDirectors = [];
     $('.directors').each(function( index ) {
-      console.log($(this).prop('name') + ": " + $(this).val());
+      // console.log($(this).prop('name') + ": " + $(this).val());
       availableDirectors.push($(this).val());
     });
 
